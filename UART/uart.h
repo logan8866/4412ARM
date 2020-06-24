@@ -7,5 +7,5 @@
 #define UBRDIV2 *(volatile unsigned int*)0x13820028
 #define UFRACVAL2 *(volatile unsigned int*)0x1382002c
 
-extern void print_char(char *c);
+extern void print_char(char c);
 extern void init_uart();

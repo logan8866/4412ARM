@@ -41,8 +41,9 @@ GIC_P gic = {0x10480000,0x10490104,0x10480004,0x10490000,0x10490838,0x1048000c,0
 int main(){
 	init_led();
 	init_irq(&gpio,&gic);
+	init_uart();
 	int num = 0;
-	char *c = "Y";
+	char c = "Y";
 	while (1){
 		print_char(c);
 		GPX3DAT = GPX3DAT & (~(0x01<<1)) | (0x01<<1);
